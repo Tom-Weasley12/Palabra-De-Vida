@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Palabra De Vida</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <h1 class="titulo">Palabra De Vida</h1>
+  <p class="descripcion">Esta palabra la manda Dios para ti.</p>
+
+  <div class="contenedor">
+    <button id="botonVersiculo" class="boton-inferior">Obtener Palabra</button>
+  </div>
+
+  <div id="versiculoAleatorio" class="versiculo-derecha"></div>
+
+  <div class="contenedor-imagenes">
+    <img src="images/leon14.jpg" alt="papa" class="imagen-papa">
+    <img src="images/rosario.jpg" alt="rosario" class="imagen-rosario">
+  </div>
+
+  <footer class="creditos">
+    <p>Dios te ama</p>
+    <p>Desarrollado por un joven católico con ganas de predicar.</p>
+  </footer>
+
+  <script>
+    const versiculos = [
+      "Porque yo sé los planes que tengo para ustedes. — Jeremías 29:11",
+      "El Señor es mi pastor, nada me faltará. — Salmo 23:1",
+      "Todo lo puedo en Cristo que me fortalece. — Filipenses 4:13",
+      "Amarás al Señor tu Dios con todo tu corazón. — Mateo 22:37",
+      "Dios es amor. — 1 Juan 4:8",
+      "No temas, porque yo estoy contigo. — Isaías 41:10",
+      "Sed fuertes y valientes. — Deuteronomio 31:6",
+      "Bienaventurados los que lloran, porque ellos serán consolados. — Mateo 5:4",
+      "El que cree en mí, aunque esté muerto, vivirá. — Juan 11:25",
+      "Estad siempre gozosos. — 1 Tesalonicenses 5:16",
+      "Orad sin cesar. — 1 Tesalonicenses 5:17",
+      "El Señor es mi fuerza y mi escudo. — Salmo 28:7",
+      "Jehová te bendiga y te guarde. — Números 6:24",
+      "Los que esperan a Jehová tendrán nuevas fuerzas. — Isaías 40:31",
+      "Jehová va delante de ti; no te dejará. — Deuteronomio 31:8",
+      "Por fe andamos, no por vista. — 2 Corintios 5:7",
+      "Cree en el Señor Jesucristo, y serás salvo. — Hechos 16:31",
+      "Fíate de Jehová de todo tu corazón. — Proverbios 3:5",
+      "Hacedlo todo de corazón, como para el Señor. — Colosenses 3:23",
+      "El Señor es mi luz y mi salvación. — Salmo 27:1",
+      "Hagan todo con amor. — 1 Corintios 16:14",
+      "El Padre y yo uno somos. — Juan 10:30",
+      "Jesús lloró. — Juan 11:35",
+      "En el principio creó Dios los cielos y la tierra. — Génesis 1:1",
+      "Den gracias a Dios en toda situación. — 1 Tesalonicenses 5:18",
+      "El ángel de Jehová acampa alrededor de los que le temen. — Salmo 34:7",
+      "La fe viene por el oír, y el oír, por la palabra de Dios. — Romanos 10:17",
+      "No nos cansemos de hacer el bien. — Gálatas 6:9",
+      "No seas sabio en tu propia opinión; teme a Jehová. — Proverbios 3:7",
+      "Buscad las cosas de arriba, donde está Cristo. — Colosenses 3:1",
+      "Concentren su atención en las cosas de arriba. — Colosenses 3:2",
+      "Dios muestra su amor para con nosotros, en que siendo aún pecadores, Cristo murió por nosotros. — Romanos 5:8",
+      "Mira que estoy a la puerta y llamo. — Apocalipsis 3:20",
+      "El que sabe hacer lo bueno y no lo hace, le es pecado. — Santiago 4:17",
+      "No contristéis al Espíritu Santo de Dios. — Efesios 4:30",
+      "¡Mirad cuán bueno y cuán delicioso es habitar los hermanos juntos en armonía! — Salmo 133:1",
+      "Sed más que vencedores por medio de aquel que nos amó. — Romanos 8:37",
+      "Si se humillare mi pueblo... yo oiré desde los cielos, y sanaré su tierra. — 2 Crónicas 7:14",
+      "Aunque ande en valle de sombra de muerte, no temeré mal alguno. — Salmo 23:4",
+      "Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito. — Juan 3:16",
+      "Clama a mí, y yo te responderé. — Jeremías 33:3",
+      "Confía en el Señor y haz el bien. — Salmo 37:3",
+      "No se turbe vuestro corazón, ni tenga miedo. — Juan 14:27",
+      "Sean fuertes y valientes; no teman ni se asusten. — Josué 1:9",
+      "Yo soy el camino, la verdad y la vida. — Juan 14:6",
+      "La paz os dejo, mi paz os doy. — Juan 14:27",
+      "El justo por la fe vivirá. — Romanos 1:17",
+      "Alegraos en la esperanza, sed pacientes en la tribulación. — Romanos 12:12",
+      "Todo tiene su tiempo. — Eclesiastés 3:1",
+      "El amor nunca deja de ser. — 1 Corintios 13:8",
+      "El Señor peleará por vosotros. — Éxodo 14:14",
+      "No te desampararé ni te dejaré. — Hebreos 13:5",
+      "Yo estaré contigo todos los días, hasta el fin del mundo. — Mateo 28:20",
+      "Guarda silencio ante Jehová, y espera en él. — Salmo 37:7",
+      "Dame entendimiento para guardar tu ley. — Salmo 119:34",
+      "Esforzaos y cobrad ánimo. — Salmo 31:24",
+      "La lámpara del cuerpo es el ojo. — Mateo 6:22",
+      "Los que buscan al Señor no tendrán falta de ningún bien. — Salmo 34:10",
+      "Jehová es mi pastor; nada me faltará. — Salmo 23:1",
+      "Mi poder se perfecciona en la debilidad. — 2 Corintios 12:9",
+      "En Dios solamente está acallada mi alma. — Salmo 62:1",
+      "Bienaventurado el hombre que confía en Jehová. — Jeremías 17:7",
+      "El que habita al abrigo del Altísimo morará bajo la sombra del Omnipotente. — Salmo 91:1",
+      "Encomienda a Jehová tu camino, y confía en él. — Salmo 37:5",
+      "El que habita en el amor, habita en Dios. — 1 Juan 4:16",
+      "Dios no es hombre para que mienta. — Números 23:19",
+      "El que comenzó en vosotros la buena obra, la perfeccionará. — Filipenses 1:6",
+      "Mi ayuda viene de Jehová. — Salmo 121:2",
+      "El corazón alegre hermosea el rostro. — Proverbios 15:13",
+      "El que guarda su boca guarda su alma. — Proverbios 13:3"
+    ];
+
+    const boton = document.getElementById("botonVersiculo");
+    const contenedor = document.getElementById("versiculoAleatorio");
+
+    boton.addEventListener("click", () => {
+      const aleatorio = Math.floor(Math.random() * versiculos.length);
+      contenedor.innerHTML = `<h3>${versiculos[aleatorio]}</h3>`;
+    });
+  </script>
+</body>
+</html>

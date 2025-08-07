@@ -1,0 +1,111 @@
+body {
+    background-color: #EDE6DB;
+    padding: 20px;
+    padding-bottom: 60px;
+}
+
+.titulo {
+    text-align: center;
+    color: #2C3E50;
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+}
+
+.descripcion {
+    text-align: center;
+    color: #7B3E19;
+    font-size: 20px;
+    font-family: 'Lora', serif;
+}
+
+.boton-inferior {
+    display: inline-block;            /* Asegura que se comporte como botón */
+    background-color: #ECF0F1;        /* Color de fondo claro */
+    color: #2C3E50;                   /* Color del texto */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;                  /* Tamaño del texto */
+    padding: 10px 20px;               /* Espaciado interior */
+    border: none;                     /* Sin borde */
+    border-radius: 20px;              /* Bordes redondeados */
+    cursor: pointer;                  /* Cambia el cursor al pasar el ratón */
+    transition: background-color 0.3s ease;  /* Animación suave */
+}
+
+.boton-inferior:hover {
+    background-color: #BDC3C7;        /* Color al pasar el ratón por encima */
+}
+
+
+.contenedor {
+    text-align: center;
+    padding-bottom: 60px;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+
+.creditos {
+    text-align: center;
+    margin-top: 40px; 
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff0e6;
+    color: #343232;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    z-index: 1000; 
+}
+.contenedor-versiculo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 40px 100px;
+}
+.imagen-papa {
+    width: 450px;
+    height: 300px;
+    margin-top: -80px;
+    margin-left: -100px;
+    border-radius: 20px;
+}
+.versiculo-derecha h3 {
+    font-size: 22px;
+    color: #2C3E50;
+    font-family: 'Lora', serif;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+#versiculoAleatorio {
+    min-height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.contenedor-imagenes {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    margin-top: 40px;
+    width: 100%;
+  }
+.imagen-papa {
+    width: 450px;
+    height: 300px;
+    margin-left: 0; 
+    margin-top: -250px; 
+}
+.imagen-rosario {
+    width: 300px;
+    height: 500px;
+    margin-right: 0;  
+    margin-top: -275px;
+    border-radius: 20px;
+}
