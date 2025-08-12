@@ -19,20 +19,20 @@ body {
 }
 
 .boton-inferior {
-    display: inline-block;            /* Asegura que se comporte como botón */
-    background-color: #ECF0F1;        /* Color de fondo claro */
-    color: #2C3E50;                   /* Color del texto */
+    display: inline-block;            
+    background-color: #ECF0F1;        
+    color: #2C3E50;                   
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;                  /* Tamaño del texto */
-    padding: 10px 20px;               /* Espaciado interior */
-    border: none;                     /* Sin borde */
-    border-radius: 20px;              /* Bordes redondeados */
-    cursor: pointer;                  /* Cambia el cursor al pasar el ratón */
-    transition: background-color 0.3s ease;  /* Animación suave */
+    font-size: 16px;                  
+    padding: 10px 20px;               
+    border: none;                     
+    border-radius: 20px;             
+    cursor: pointer;                  
+    transition: background-color 0.3s ease; 
 }
 
 .boton-inferior:hover {
-    background-color: #BDC3C7;        /* Color al pasar el ratón por encima */
+    background-color: #BDC3C7;     
 }
 
 
@@ -109,3 +109,22 @@ footer {
     margin-top: -275px;
     border-radius: 20px;
 }
+.descripcion-papa {
+    width: 450px;
+    height: 300px;
+    margin-left: 0; 
+    margin-top: 1px; 
+}
+.papa-container {
+    text-align: center;
+  }
+  
+  .descripcion-papa {
+    font-size: 20px;
+    color: #bcaa42;
+    font-family: 'Lora', serif;
+    margin-top: 8px;
+    font-style: italic;
+    width: 450px; 
+  }
+  
