@@ -20,10 +20,15 @@
   <div id="versiculoAleatorio" class="versiculo-derecha"></div>
 
   <div class="contenedor-imagenes">
-    <img src="images/leon14.jpg" alt="papa" class="imagen-papa">
-    <img src="images/rosario.jpg" alt="rosario" class="imagen-rosario">
+    <div class="papa-container">
+      <img src="images/leon14.jpg" alt="Papa" class="imagen-papa">
+      <p class="descripcion-papa">
+        Su Santidad, el Papa Leon XIV, Pastor de la Iglesia y mensajero de paz.
+      </p>
+    </div>
+  
+    <img src="images/rosario.jpg" alt="Rosario" class="imagen-rosario">
   </div>
-
   <footer class="creditos">
     <p>Dios te ama</p>
     <p>Desarrollado por un joven católico con ganas de predicar.</p>
@@ -109,7 +114,7 @@
     boton.addEventListener("click", () => {
       const aleatorio = Math.floor(Math.random() * versiculos.length);
       contenedor.innerHTML = `<h3>${versiculos[aleatorio]}</h3>`;
-    });
+    }); 
   </script>
 </body>
 </html>
