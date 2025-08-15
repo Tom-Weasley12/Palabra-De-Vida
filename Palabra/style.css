@@ -1,11 +1,9 @@
+/* ===CSS original=== */
 body {
     background-color: #EDE6DB;
     padding: 20px;
     padding-bottom: 60px;
-}
-
-body, html{
-    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .titulo {
@@ -23,22 +21,21 @@ body, html{
 }
 
 .boton-inferior {
-    display: inline-block;            
-    background-color: #ECF0F1;        
-    color: #2C3E50;                   
+    display: inline-block;
+    background-color: #ECF0F1;
+    color: #2C3E50;
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;                  
-    padding: 10px 20px;               
-    border: none;                     
-    border-radius: 20px;             
-    cursor: pointer;                  
-    transition: background-color 0.3s ease; 
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .boton-inferior:hover {
-    background-color: #BDC3C7;     
+    background-color: #BDC3C7;
 }
-
 
 .contenedor {
     text-align: center;
@@ -51,6 +48,7 @@ body, html{
     text-align: center;
     margin-top: 40px; 
 }
+
 footer {
     position: fixed;
     bottom: 0;
@@ -65,12 +63,14 @@ footer {
     box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
     z-index: 1000; 
 }
+
 .contenedor-versiculo {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     margin: 40px 100px;
 }
+
 .imagen-papa {
     width: 450px;
     height: 300px;
@@ -78,6 +78,7 @@ footer {
     margin-left: -100px;
     border-radius: 20px;
 }
+
 .versiculo-derecha h3 {
     font-size: 22px;
     color: #2C3E50;
@@ -86,6 +87,7 @@ footer {
     margin: 0 auto;
     text-align: center;
 }
+
 #versiculoAleatorio {
     min-height: 100px; 
     display: flex;
@@ -93,19 +95,22 @@ footer {
     justify-content: center;
     text-align: center;
 }
+
 .contenedor-imagenes {
     display: flex;
     justify-content: space-between; 
     align-items: flex-start;
     margin-top: 40px;
     width: 100%;
-  }
+}
+
 .imagen-papa {
     width: 450px;
     height: 300px;
     margin-left: 0; 
     margin-top: -250px; 
 }
+
 .imagen-rosario {
     width: 300px;
     height: 500px;
@@ -113,22 +118,67 @@ footer {
     margin-top: -275px;
     border-radius: 20px;
 }
+
 .descripcion-papa {
     width: 450px;
     height: 300px;
     margin-left: 0; 
     margin-top: 1px; 
-}
-.papa-container {
-    text-align: center;
-  }
-  
-  .descripcion-papa {
     font-size: 20px;
     color: #bcaa42;
     font-family: 'Lora', serif;
     margin-top: 8px;
     font-style: italic;
-    width: 450px; 
-  }
-  
+}
+
+.papa-container {
+    text-align: center;
+}
+
+/* ===CSS para el resto de secciones=== */
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    
+}
+
+.papas h1, .fe h1 {
+    text-align: center;
+    color: #2C3E50;
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 30px;
+}
+
+.fe p {
+    font-size: 20px;
+    color: #2C3E50;
+    text-align: center;
+    max-width: 700px;
+}
+
+/* Contenedor para las imágenes nuevas (resto de secciones) */
+.contenedor-imagenes-papa {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.contenedor-imagenes-papa img {
+    height: 300px;
+    width: auto;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.5s;
+}
+
+.contenedor-imagenes-papa img:hover {
+    transform: scale(1.2);
+}
